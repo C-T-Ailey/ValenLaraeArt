@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+#insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip:text;
+  transition: color 0.3s linear;
+}
+#insta:hover{
+  animation: fade-in 0.3s linear;
+  color:rgba(0,0,0,0);
+}
+
+#tumblr {
+  transition: filter 0.3s linear;
+}
+
+#tumblr:hover {
+  filter: invert(11%) sepia(96%) saturate(4902%) hue-rotate(199deg) brightness(85%) contrast(109%);
+}
+
+
+@keyframes fade-in { 
+  0%{color:rgba(82, 82, 82,1);}
+  100%{color:rgba(0,0,0,0);}
+}
+
+@-webkit-keyframes fade-in { 
+  0%{color:rgba(82, 82, 82,1);}
+  100%{color:rgba(0,0,0,0);}
 }
