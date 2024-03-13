@@ -1,5 +1,6 @@
 import React from 'react'
 import {coquette, espacio, avenir} from '@/app/fonts'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'About | Valen LaRae'
@@ -10,7 +11,7 @@ export default function About() {
         <div className='h-[65vh] w-screen flex justify-center'>
             <div className='w-[50vw] h-[65vh] flex flex-col items-center justify-around'>
                 <div className='theartist'>
-                    <img src='theartist.png' style={{height: "250px", width: "auto"}}></img>
+                    <Image src={'/theartist.png'} height={250} width={250}/>
                 </div>
                 <div className='text-[3.5rem] text-[#181818]'>
                     <h1 className={coquette.className}>
@@ -24,7 +25,7 @@ export default function About() {
                 </div>
                 <div className='w-[42rem] text-base leading-7 font-light text-center'>
                 <p className={avenir.className}>
-                    A graduate of the Savannah College of Art and Design with a BFA in Sequential Art, carving a path with only her pencil and determination. Currently travelling from event to event, showcasing her work and meeting new people. Lover of both traditional and digital media, finding that they often go hand-in-hand. Her inspirations come from the cartoons and fantasy books of her childhood and a lifetime's experience of growing up in the Southern countryside.    
+                    {"A graduate of the Savannah College of Art and Design with a BFA in Sequential Art, carving a path with only her pencil and determination. Currently travelling from event to event, showcasing her work and meeting new people. Lover of both traditional and digital media, finding that they often go hand-in-hand. Her inspirations come from the cartoons and fantasy books of her childhood and a lifetime's experience of growing up in the Southern countryside."}    
                 </p>
                 </div>
             </div>
