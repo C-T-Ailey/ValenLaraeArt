@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,17 +12,17 @@ export default function Portfolio() {
         <div className='flex h-fit w-[61em] flex-row justify-between'>
             <div>
                 <Link href={'/portfolio/original-art'}>
-                    <img src='originals_icon.png'/>
+                    <Image src={'/originals_icon.png'} height={323} width={323}/>
                 </Link>
             </div>
             <div>
                 <Link href={'/portfolio/fan-art'}>
-                    <img src='fanart_icon.png'/>
+                    <Image src={'/fanart_icon.png'} height={323} width={323}/>
                 </Link>
             </div>
             <div>
                 <Link href={'/portfolio/sketchbook'}>
-                    <img src='sketchbook_icon.png'/>
+                    <Image src={'/sketchbook_icon.png'} height={323} width={323}/>
                 </Link>
             </div>
         </div>
