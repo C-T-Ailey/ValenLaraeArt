@@ -18,7 +18,7 @@ export default function Portfolio() {
                     Original Art
                 </div>
                 <Link href={'/portfolio/original-art'}>
-                    <Image src={'/icons/original_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Original Artworks gallery link image." height={323} width={323}/>
+                    <Image src={'/icons/original_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Original Artworks gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
 
