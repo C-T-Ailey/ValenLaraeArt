@@ -31,10 +31,10 @@ export default function OriginalWork() {
             // orientation = landscape
 
             <div key={index} className='w-fit h-auto relative my-6'>
-              <div className='w-[24rem] h-[32rem] relative z-10' style={{rotate: "90deg"}}>
+              <div className='w-[32rem] h-[32rem] relative z-10' style={{rotate: "90deg"}}>
                 <Image src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
               </div>
-              <div className='w-[27rem] h-[18rem] absolute top-[7rem] left-[-1.5rem]'>
+              <div className='w-[27rem] h-[18rem] absolute top-[7rem] left-[2.5rem]'>
                 <Image src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
               </div>
             </div>
