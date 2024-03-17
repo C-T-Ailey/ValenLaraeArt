@@ -10,8 +10,8 @@ export default function About() {
   return (
         <div className='h-[65vh] w-screen flex justify-center'>
             <div className='w-[50vw] h-[65vh] flex flex-col items-center justify-around'>
-                <div className='theartist'>
-                    <Image src={'/theartist.png'} height={250} width={250}/>
+                <div className='theartist rounded-full overflow-hidden'>
+                    <Image src={'/icons/theartist.png'} height={250} width={250} className='denied'/>
                 </div>
                 <div className='text-[3.5rem] text-[#181818]'>
                     <h1 className={coquette.className}>

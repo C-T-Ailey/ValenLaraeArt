@@ -26,6 +26,17 @@ body {
   filter: invert(11%) sepia(96%) saturate(4902%) hue-rotate(199deg) brightness(85%) contrast(109%);
 }
 
+#bluesky {
+  transition: filter 0.3s linear;
+}
+
+#bluesky:hover {
+  filter: invert(48%) sepia(68%) saturate(2626%) hue-rotate(170deg) brightness(103%) contrast(105%);
+}
+
+.denied {
+  pointer-events: none;
+}
 
 @keyframes fade-in { 
   0%{color:rgba(82, 82, 82,1);}

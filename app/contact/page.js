@@ -24,7 +24,7 @@ export default function Contact() {
                             <i className='bi bi-twitter-x text-xl transition ease hover:opacity-40 duration-300'></i>
                         </a>
                         <a href='https://valenlarae.tumblr.com'>
-                            <img src='/icons8-tumblr.svg' className='h-7 mt-[3px]' id='tumblr'/>
+                            <img src='/icons/icons8-tumblr.svg' className='h-7 mt-[3px]' id='tumblr'/>
                         </a>
                         <a href='https://www.instagram.com/valenlarae'>
                             <i className='bi bi-instagram text-xl' id='insta'></i>
