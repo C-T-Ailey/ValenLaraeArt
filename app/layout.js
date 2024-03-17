@@ -17,14 +17,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={coquette.className}>
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen w-full">
           <div className="h-48">
             <Header/>
           </div>
-          <div>
+          <div className="pb-24">
             {children}
           </div>
-          <div className="absolute bottom-0">
+          <div className="absolute bottom-0 w-full">
             <Footer/>
           </div>
         </div>
