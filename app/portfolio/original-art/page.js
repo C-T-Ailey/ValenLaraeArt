@@ -11,6 +11,10 @@ export const metadata = {
   title: 'Original Art | Valen LaRae'
 }
 
+const detectOrientation = (image) => {
+  return image.height >= image.width
+}
+
 const galleryContents = [BCard, Galaxy, Hazel, Helios, HeliosTwo]
 
 export default function OriginalWork() {
@@ -20,61 +24,35 @@ export default function OriginalWork() {
 
         {
           galleryContents.map((portrait, index) => (
-            <div key={index} className='w-fit h-fit relative my-6'>
-              <div className='w-[24rem] h-[32rem] relative'>
-                <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
+
+            !detectOrientation(portrait) ?
+
+            // orientation = landscape
+
+            <div key={index} className='w-fit h-auto relative my-6'>
+              <div className='w-[24rem] h-[32rem] relative z-10' style={{rotate: "90deg"}}>
+                <Image src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
+              </div>
+              <div className='w-[27rem] h-[18rem] absolute top-[7rem] left-[-1.5rem]'>
+                <Image src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+              </div>
+            </div>
+
+            :
+
+            // orientation = portrait
+
+            <div key={index} className='w-[24rem] h-[32rem] relative my-6'>
+              <div className='w-[24rem] h-[32rem] relative z-10'>
+                <Image src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
               </div>
               <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
                 <Image src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
               </div>
             </div>
+
           ))
         }
-
-          {/* <div className='w-fit h-fit relative my-6'>
-            <div className='w-[24rem] h-[32rem] relative'>
-              <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
-            </div>
-            <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
-              <Image src={BCard} alt="business card artwork thumbnail" fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
-            </div>
-          </div>
-
-          <div className='w-fit h-fit relative my-6'>
-            <div className='w-[24rem] h-[32rem] relative'>
-              <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)'/>
-            </div>
-            <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
-              <Image src={Galaxy} alt="Galaxy-haired Girl thumbnail" fill style={{objectFit: "contain"}} sizes='(max-width: fit-content)'/>
-            </div>
-          </div>
-
-          <div className='w-fit h-fit relative my-6'>
-            <div className='w-[24rem] h-[32rem] relative'>
-              <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)'/>
-            </div>
-            <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
-              <Image src={Hazel} alt="Witch Hazel thumbnail" fill style={{objectFit: "contain"}} sizes='(max-width: fit-content)'/>
-            </div>
-          </div>
-
-          <div className='w-fit h-fit relative my-6'>
-            <div className='w-[24rem] h-[32rem] relative'>
-              <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)'/>
-            </div>
-            <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
-              <Image src={Helios} alt="Helios number one artwork thumbnail" fill style={{objectFit: "contain"}} sizes='(max-width: fit-content)'/>
-            </div>
-          </div>
-
-          <div className='w-fit h-fit relative my-6'>
-            <div className='w-[24rem] h-[32rem] relative'>
-              <Image src={Frame} alt="Gallery portrait frame overlay" fill className='z-10' style={{objectFit: "contain"}} sizes='(max-width: 24rem)'/>
-            </div>
-            <div className='w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'>
-              <Image src={HeliosTwo} alt="Helios number two artwork thumbnail" fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
-            </div>
-          </div> */}
 
       </div>
     </div>
