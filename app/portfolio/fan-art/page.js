@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import Heroes from '/public/images/fan/HomebrewHeroesLogo.jpg'
-import Hopes from '/public/images/fan/HopesAndDreams.jpg'
+import Hopes from '/public/images/fan/HopesandDreams.jpg'
 import Jojo from '/public/images/fan/Jojo_Stone_Ocean.jpg'
-import Garden from '/public/images/fan/OverTheGardenWall.jpg'
+import Garden from '/public/images/fan/OvertheGardenWall.jpg'
 import Jelly from '/public/images/fan/PrincessJellyfish.jpg'
 import Frame from '/public/images/frame.png'
 
