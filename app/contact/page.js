@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import {coquette, espacio} from '@/app/fonts'
 import Link from 'next/link'
@@ -33,8 +34,8 @@ export default function Contact() {
                 </div>
             </div>
         </div>
-        <div className='h-[25rem] w-[29rem] border-2 border-black flex items-center justify-center'>
-            this is where the email form is going to be
+        <div className='h-fit w-fit '>
+            <Image src={"/images/original/BusinessCards2023.jpg"} alt="Business card artwork." width={425} height={725}/>
         </div>
     </div>
   )

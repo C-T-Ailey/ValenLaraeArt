@@ -11,26 +11,35 @@ export const metadata = {
 export default function Portfolio() {
   return (
     <div className='h-[65vh] w-screen flex items-center justify-center'>
-        <div className='flex h-fit w-[61em] flex-row justify-between'>
-            <div>
+        <div className='flex h-fit w-[64em] flex-row justify-between'>
+
+            <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
+                <div className='absolute z-20 w-full pointer-events-none'>
+                    Original Art
+                </div>
                 <Link href={'/portfolio/original-art'}>
-                    <Image src={'/icons/original_thumb.png'} height={323} width={323}/>
+                    <Image src={'/icons/original_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Original Artworks gallery link image." height={323} width={323}/>
                 </Link>
             </div>
+
             <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
                 <div className='absolute z-20 w-full pointer-events-none'>
                     <span className='tracking-tighter'>F</span>an Art
                 </div>
                 <Link href={'/portfolio/fan-art'}>
-                    <Image src={'/icons/fan_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} height={323} width={323}/>
+                    <Image src={'/icons/fan_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Fan Artworks gallery link image." height={323} width={323}/>
                 </Link>
             </div>
-            <div>
+
+            <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
+                <div className='absolute z-20 w-full pointer-events-none'>
+                    Sketchbook
+                </div>
                 <Link href={'/portfolio/sketchbook'}>
-                    {/* <Image src={'/icons/sketch_thumb.png'} height={323} width={323}/> */}
-                    <Image src={'/icons/sketch_thumb.png'} height={323} width={323}/>
+                    <Image src={'/icons/sketch_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Unfinished Sketches gallery link image." height={323} width={323}/>
                 </Link>
             </div>
+
         </div>
     </div>
   )

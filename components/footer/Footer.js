@@ -15,6 +15,9 @@ export default function Footer() {
                 
                 <div className='flex w-44 justify-center' id='socials'>
                     <div className='flex w-20 justify-between'>
+                        {/* <a href='https://bsky.app/profile/valenlarae.bsky.social'>
+                            <img src='/bluesky.svg' id='bluesky'/>
+                        </a> */}
                         <a href='https://www.twitter.com/ValenLaRae'>
                             <i className='bi bi-twitter-x text-xl transition ease hover:opacity-40 duration-300'></i>
                         </a>
