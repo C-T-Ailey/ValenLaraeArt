@@ -26,11 +26,14 @@ export default function Header() {
                 </div>
                 <div className='flex w-44 justify-end' id='socials'>
                     <div className='flex w-20 justify-between'>
+                        {/* <a href='https://bsky.app/profile/valenlarae.bsky.social'>
+                            <img src='/bluesky.svg' id='bluesky'/>
+                        </a> */}
                         <a href='https://www.twitter.com/ValenLaRae'>
                             <i className='bi bi-twitter-x text-xl transition ease hover:opacity-40 duration-300'></i>
                         </a>
                         <a href='https://valenlarae.tumblr.com'>
-                            <img src='/icons8-tumblr.svg' className='h-7' id='tumblr'/>
+                            <img src='/icons/icons8-tumblr.svg' className='h-7' id='tumblr'/>
                         </a>
                         <a href='https://www.instagram.com/valenlarae'>
                             <i className='bi bi-instagram text-xl' id='insta'></i>
