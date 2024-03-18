@@ -18,23 +18,61 @@ body {
 }
 
 #tumblr {
+  height: 48px;
+  width: 48px;
+}
+
+#tumblr img {
+  mask-image: url("../public/icons/icons8-tumblr.png");
   transition: filter 0.3s linear;
 }
 
-#tumblr:hover {
-  filter: invert(11%) sepia(96%) saturate(4902%) hue-rotate(199deg) brightness(85%) contrast(109%);
+#tumblr::before {
+  background-color: #395976;
+  mask-image: url("../public/icons/icons8-tumblr.png");
+  content: "";
+  height: 48px;
+  width: 48px;
+  position: absolute;
+}
+
+#tumblr img:hover {
+  filter: opacity(0);
 }
 
 #bluesky {
-  transition: filter 0.3s linear;
+  width: 64px;
+  height: 57px;
+  transform: scale(0.6)
 }
 
-#bluesky:hover {
-  filter: invert(48%) sepia(68%) saturate(2626%) hue-rotate(170deg) brightness(103%) contrast(105%);
+#bluesky img {
+  /* background-image: linear-gradient(to top,#59B9FF, #0A7AFF); */
+  mask-image: url('../public/icons/bluesky.png');
+  transition: filter 0.3s linear;
+  
+}
+
+#bluesky::before {
+  background-image: linear-gradient(to top,#59B9FF, #0A7AFF);
+  mask-image: url('../public/icons/bluesky.png');
+  content: "";
+  height: 57px;
+  width: 64px;
+  position: absolute;
+  bottom: 0px;
+}
+
+#bluesky img:hover {
+  filter: opacity(0)
 }
 
 .denied {
   pointer-events: none;
+}
+
+.jellybg {
+  background-image: url('../public/images/original/jelly_banner.jpg')
 }
 
 .plaque-bg::before {

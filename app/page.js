@@ -6,10 +6,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between py-16">
-      <div className="w-full h-[30rem] bg-slate-300">
+    <main className="flex flex-col items-start justify-between">
+      <div className="w-full">
         
       </div>
-    </div>
+    </main>
   );
 }
