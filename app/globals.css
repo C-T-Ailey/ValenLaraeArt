@@ -6,7 +6,6 @@ body {
   background-color: white;
 }
 
-
 #insta {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background-clip: text;
@@ -36,6 +35,19 @@ body {
 
 .denied {
   pointer-events: none;
+}
+
+.plaque-bg::before {
+  content: "";
+  background-image: url('../public/images/ironpattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
 }
 
 @keyframes fade-in { 
