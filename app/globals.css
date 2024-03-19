@@ -46,6 +46,11 @@ body {
   transform: scale(0.6)
 }
 
+#socials div:hover {
+  filter: drop-shadow(2px 2px 2px black);
+  transition: filter 0.1s linear;
+}
+
 #bluesky img {
   /* background-image: linear-gradient(to top,#59B9FF, #0A7AFF); */
   mask-image: url('../public/icons/bluesky.png');

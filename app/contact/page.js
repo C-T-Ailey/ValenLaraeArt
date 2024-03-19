@@ -29,7 +29,7 @@ export default function Contact() {
                             </div>
                             <div id='xtwitter'>
                                 <a href='https://www.twitter.com/ValenLaRae'>
-                                    <i className='bi bi-twitter-x text-3xl transition ease hover:opacity-40 duration-300'></i>
+                                    <i className='bi bi-twitter-x text-4xl transition ease hover:opacity-40 duration-300'></i>
                                 </a>
                             </div>
                             <div id='tumblr'>
@@ -39,7 +39,7 @@ export default function Contact() {
                             </div>
                             <div id='instagram'>
                                 <a href='https://www.instagram.com/valenlarae'>
-                                    <i className='bi bi-instagram text-3xl' id='insta'></i>
+                                    <i className='bi bi-instagram text-4xl' id='insta'></i>
                                 </a>
                             </div>
                         
@@ -47,7 +47,7 @@ export default function Contact() {
                 </div>
             </div>
             <div className='h-fit w-fit mx-5'>
-                <Image src={"/images/original/BusinessCards2023.jpg"} alt="Business card artwork." width={425} height={725} priority/>
+                <Image className='nXy44zmWO5dj' src={"/images/original/BusinessCards2023.jpg"} alt="Business card artwork." width={425} height={725} priority/>
             </div>
         </div>
     </div>

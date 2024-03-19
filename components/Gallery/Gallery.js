@@ -46,10 +46,10 @@ export default function Gallery(props) {
 
                   <div className={imageContainerStyle}>
                     <div className={landscapeFrameStyle} style={{rotate: "90deg"}}>
-                      <Image src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
+                      <Image className='nXy44zmWO5dj' src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
                     </div>
                     <div className={landscapeImageStyle}>
-                      <Image src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
+                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
                     </div>
                   </div>
 
@@ -57,10 +57,10 @@ export default function Gallery(props) {
 
                   <div className={imageContainerStyle}>
                     <div className={portraitFrameStyle}>
-                      <Image src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
+                      <Image className='nXy44zmWO5dj' src={Frame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
                     </div>
                     <div className={portraitImageStyle}>
-                      <Image src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
                     </div>
                   </div>
 
