@@ -29,7 +29,7 @@ export default function Gallery(props) {
   const portraitImageStyle = 'w-[18rem] h-[27rem] absolute top-[2.5rem] left-[3rem]'
 
   return (
-    <div className='w-full flex h-fit justify-center pb-36'>
+    <div className='w-full flex h-fit justify-center py-12'>
       <div className='flex w-[80%] justify-around flex-wrap'>
 
         {

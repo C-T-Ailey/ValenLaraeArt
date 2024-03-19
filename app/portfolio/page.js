@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Portfolio() {
   return (
-    <main className='h-[65vh] w-full flex items-center justify-center'>
+    <div className='h-[calc(100vh-6rem)] w-full flex items-center justify-center'>
         <div className='flex h-fit w-[64em] flex-row justify-between'>
 
             <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
@@ -41,6 +41,6 @@ export default function Portfolio() {
             </div>
 
         </div>
-    </main>
+    </div>
   )
 }

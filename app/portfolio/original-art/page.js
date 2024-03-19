@@ -43,8 +43,8 @@ export default function OriginalWork() {
   ]
 
   return (
-
-    <Gallery galleryContents={galleryContents} plaques={plaques}/>
+    
+      <Gallery galleryContents={galleryContents} plaques={plaques}/>
 
   )
 }
