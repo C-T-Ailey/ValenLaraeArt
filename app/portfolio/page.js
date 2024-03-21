@@ -9,34 +9,49 @@ export const metadata = {
   }
 
 export default function Portfolio() {
-  return (
-    <div className='h-[calc(100vh-6rem)] w-full flex items-center justify-center'>
-        <div className='flex h-fit w-[64em] flex-row justify-between'>
 
-            <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
-                <div className='absolute z-20 w-full pointer-events-none'>
-                    Original Art
+    const linkDivStyle = `${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center tracking-wide mx-auto my-3 max-w-40 md:max-w-56 lg:max-w-60 xl:max-w-[323px]`
+
+    const innerBorder = 'absolute z-30 h-full w-full rounded-full border-white border-[3px] pointer-events-none'
+
+    const titleStyle = 'absolute w-[80%] md:w-[75%] z-20 w-full pointer-events-none text-center text-black text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-bold'
+
+    const imageStyle = 'z-10 opacity-60 rounded-full zoom'
+
+  return (
+    <div className='md:h-full w-full text-center'>
+        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:my-12 tracking-wide`}>Portfolio</h1>
+        <div className='w-[90%] md:w-[70%] flex flex-wrap justify-center mx-auto my-12 md:my-7 xl:my-[calc(((100vh-6rem)-323px)/3)]'>
+            <div className={linkDivStyle}>
+                <div className={innerBorder}>
                 </div>
-                <Link href={'/portfolio/original-art'}>
-                    <Image src={'/icons/original_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Original Artworks gallery link image." height={323} width={323} priority/>
+                <div className={titleStyle}>
+                    Original Works
+                </div>
+                <Link href={'/portfolio/original-works'}>
+                    <Image src={'/icons/original_thumb_md.png'} className={imageStyle} alt="Original Artworks gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
 
-            <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
-                <div className='absolute z-20 w-full pointer-events-none'>
+            <div className={linkDivStyle}>
+                <div className={innerBorder}>
+                </div>
+                <div className={titleStyle}>
                     <span className='tracking-tighter'>F</span>an Art
                 </div>
                 <Link href={'/portfolio/fan-art'}>
-                    <Image src={'/icons/fan_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Fan Artworks gallery link image." height={323} width={323}/>
+                    <Image src={'/icons/fan_thumb_md.png'} className={imageStyle} alt="Fan Artworks gallery link image." height={323} width={323}/>
                 </Link>
             </div>
 
-            <div className={`${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center text-center text-black text-7xl font-bold tracking-wide`}>
-                <div className='absolute z-20 w-full pointer-events-none'>
+            <div className={linkDivStyle}>
+                <div className={innerBorder}>
+                </div>
+                <div className={titleStyle}>
                     Sketchbook
                 </div>
                 <Link href={'/portfolio/sketchbook'}>
-                    <Image src={'/icons/sketch_thumb_md.png'} className={"z-10 opacity-60 rounded-full zoom"} alt="Unfinished Sketches gallery link image." height={323} width={323}/>
+                    <Image src={'/icons/sketch_thumb_md.png'} className={imageStyle} alt="Unfinished Sketches gallery link image." height={323} width={323}/>
                 </Link>
             </div>
 

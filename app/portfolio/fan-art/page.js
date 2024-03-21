@@ -5,6 +5,7 @@ import Jojo from '/public/images/fan/Jojo_Stone_Ocean.jpg'
 import Garden from '/public/images/fan/OvertheGardenWall.jpg'
 import Jelly from '/public/images/fan/PrincessJellyfish.jpg'
 import Gallery from '@/components/Gallery/Gallery';
+import { espacio } from '@/app/fonts'
 
 export const metadata = {
   title: 'Fan Art | Valen LaRae'
@@ -45,7 +46,10 @@ export default function FanArt() {
 
   return (
 
-    <Gallery galleryContents={galleryContents} plaques={plaques}/>
+    <div className='w-full flex flex-col items-center pb-12'>
+        <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}><span className='tracking-tighter'>F</span>an Art</h1>
+        <Gallery galleryContents={galleryContents} plaques={plaques}/>
+    </div>
 
   )
 }
