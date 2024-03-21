@@ -6,7 +6,7 @@ import './header.css'
 export default function Header() {
 
   return (
-    <div className='nav fixed top-0 w-full h-24 flex flex-col items-center justify-evenly bg-white z-20 p-2' style={{boxShadow: 'rgba(0,0,0,0.7) 0 0 5px'}} id='container'>
+    <div className='nav fixed top-0 w-full h-24 flex flex-col items-center justify-evenly bg-white z-40 p-2' style={{boxShadow: 'rgba(0,0,0,0.7) 0 0 5px'}} id='container'>
         <div className='flex justify-center' id='title'>
             <div className='text-4xl font-bold tracking-widest text-[#181818]'>
                 <h1 className={espacio.className}>Valen LaRae</h1>
