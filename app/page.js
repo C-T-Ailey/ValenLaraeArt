@@ -1,4 +1,10 @@
 import Image from "next/image";
+import Hazel from '/public/images/original/HazelWitch.jpg'
+import Jelly from '/public/images/fan/PrincessJellyfish.jpg'
+import PortFrame from '/public/images/frame-port.png'
+import LandFrame from '/public/images/frame-land.png'
+import {coquette, espacio, avenir} from '@/app/fonts'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Home | Valen LaRae'
@@ -6,10 +12,85 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-start justify-between">
-      <div className="w-full">
-        
-      </div>
+    <div className='mx-auto mt-6 md:w-full flex justify-center'>
+        <div className='w-fit h-fit md:m-auto md:w-[75%] flex flex-col md:flex-row md:justify-evenly items-start md:items-center'>
+
+            {/* desktop view */}
+          
+            <div className='hidden md:block relative top-[-2rem] h-56 w-full overflow-hidden md:static md:top-[unset] md:overflow-none md:h-fit md:w-fit md:mx-5'>
+              <div className='w-fit h-auto relative'>
+                <div className='aspect-[3/4] h-[22rem] w-auto md:w-[35rem] md:h-auto relative z-10 drop-shadow-[3px_3px_3px_rgba(0,0,0,0.6)]'>
+                  <Image className='nXy44zmWO5dj' src={PortFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
+                </div>
+                <div className='aspect-[2/3] h-[19rem] w-auto md:w-[26rem] md:h-auto absolute top-[1.5rem] left-[1.85rem] md:top-[4rem] md:left-[4.5rem]'>
+                  <Image className='nXy44zmWO5dj' src={Hazel} alt={`artwork thumbnail`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+                </div>
+              </div>
+            </div>
+
+            {/* mobile view */}
+
+            <div className='block md:hidden relative top-[-1rem] h-[17rem] w-fit mx-auto overflow-hidden'>
+              <div className='w-fit h-auto relative'>
+                <div className='aspect-[4/3] w-[22rem] h-auto md:w-[32rem] md:h-auto relative z-10 drop-shadow-[3px_3px_3px_rgba(0,0,0,0.6)]'>
+                  <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
+                </div>
+                <div className='aspect-[3/2] w-[19rem] h-auto md:w-[27rem] md:h-auto absolute top-[2rem] left-[1.5rem] md:top-[7rem] md:left-[2.5rem]'>
+                  <Image className='nXy44zmWO5dj' src={Jelly} alt={`artwork thumbnail`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className={`${imageContainerStyle} md:pt-16`}>
+                    <div className={landscapeFrameStyle}>
+                      <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
+                    </div>
+                    <div className={landscapeImageStyle}>
+                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
+                    </div>
+                  </div> */}
+
+            <div className='h-full w-full md:w-fit md:h-[60vh] flex flex-col justify-start md:mx-5 my-auto'>
+
+              <div className='text-5xl text-center font-bold md:text-left w-full tracking-wider'>
+                <h1 className={espacio.className}>Art <span className="text-3xl md:text-4xl">by </span>Valen LaRae</h1>
+              </div>
+
+              <div className="h-full mx-6 flex flex-col justify-between">
+                <div className='h-fit text-3xl md:text-4xl font-bold tracking-wider md:w-[29rem]'>
+
+                  <div className="my-4 md:my-6 underline">
+                    <p className={espacio.className}>Upcoming Events</p>
+                  </div>
+
+                  <div className="h-fit m-3 md:m-6">
+                    <div className='text-3xl md:text-4xl font-bold tracking-wider md:w-[29rem]'>
+                        <div className="flex flex-row">
+                          <Link href={"https://soonercon.com/"} className={`${espacio.className} transition ease hover:opacity-40 duration-[400ms]`} target='_blank' rel='noopener noreferrer'>SoonerCon</Link>
+                        </div>
+                    </div>
+                    <div className='text-xl md:text-2xl font-bold tracking-wider md:w-[29rem]'>
+                        <p className={espacio.className}>Norman, OK</p>
+                        <p className={espacio.className}>June 21st - June 23rd 2024</p>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div className="h-fit my-3 md:my-6">
+                  <div className='text-4xl font-bold tracking-wider md:w-[29rem]'>
+                      <div className="flex flex-row">
+                        <p className={espacio.className}>More Events TBC</p>
+                      </div>
+                  </div>
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
     </div>
   );
 }
