@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: white;
-}
-
 #insta {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background-clip: text;
@@ -52,7 +48,6 @@ body {
 }
 
 #bluesky img {
-  /* background-image: linear-gradient(to top,#59B9FF, #0A7AFF); */
   mask-image: url('../public/icons/bluesky.png');
   transition: filter 0.3s linear;
   
@@ -74,10 +69,6 @@ body {
 
 .nXy44zmWO5dj {
   pointer-events: none;
-}
-
-.jellybg {
-  background-image: url('../public/images/original/jelly_banner.jpg')
 }
 
 .plaque-bg::before {

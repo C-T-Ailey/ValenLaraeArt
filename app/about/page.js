@@ -35,7 +35,7 @@ export default function About() {
                     {'Mixed Media, Passion and Experience'}
                   </div>
                   <div className={`${avenir.className} font-normal text-base md:text-lg`}>
-                    {"A graduate of the Savannah College of Art and Design with a BFA in Sequential Art, carving a path with only her pencil and determination. Currently travelling from event to event, showcasing her work and meeting new people. Lover of both traditional and digital media, finding that they often go hand-in-hand. Her inspirations come from the cartoons and fantasy books of her childhood and a lifetime's experience of growing up in the Southern countryside."}
+                    {"A graduate of the Savannah College of Art and Design with a BFA in Sequential Art, carving a path with only her pencil and determination. Currently traveling from event to event, showcasing her work and meeting new people. Lover of both traditional and digital media, finding that they often go hand-in-hand. Her inspirations come from the cartoons and fantasy books of her childhood and a lifetime's experience of growing up in the Southern countryside."}
                   </div>
                 </div>
                 

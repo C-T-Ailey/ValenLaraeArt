@@ -40,7 +40,7 @@ export default function Portfolio() {
                     <span className='tracking-tighter'>F</span>an Art
                 </div>
                 <Link href={'/portfolio/fan-art'}>
-                    <Image src={'/icons/fan_thumb_md.png'} className={imageStyle} alt="Fan Artworks gallery link image." height={323} width={323}/>
+                    <Image src={'/icons/fan_thumb_md.png'} className={imageStyle} alt="Fan Artworks gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
 
@@ -51,7 +51,7 @@ export default function Portfolio() {
                     Sketchbook
                 </div>
                 <Link href={'/portfolio/sketchbook'}>
-                    <Image src={'/icons/sketch_thumb_md.png'} className={imageStyle} alt="Unfinished Sketches gallery link image." height={323} width={323}/>
+                    <Image src={'/icons/sketch_thumb_md.png'} className={imageStyle} alt="Unfinished Sketches gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
 

@@ -31,7 +31,7 @@ export default function Gallery(props) {
   
   const portraitFrameStyle = 'aspect-[3/4] h-[22rem] w-auto md:w-[24rem] md:h-auto relative z-10 drop-shadow-[3px_3px_3px_rgba(0,0,0,0.6)]'
 
-  const portraitImageStyle = 'aspect-[2/3] h-[19rem] w-auto md:w-[18rem] md:h-auto absolute top-[1.5rem] left-[1.85rem] md:top-[2.5rem] md:left-[3rem]'
+  const portraitImageStyle = 'aspect-[2/3] h-[18.5rem] w-auto md:w-[18rem] md:h-auto absolute top-[1.8rem] left-[2.1rem] md:top-[2.6rem] md:left-[3rem]'
 
   return (
     <div className='w-full flex h-fit justify-center xl:py-6 tracking-normal'>
@@ -55,7 +55,7 @@ export default function Gallery(props) {
                       <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
                     </div>
                     <div className={landscapeImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
+                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)' placeholder='blur'/>
                     </div>
                   </div>
 
@@ -68,7 +68,7 @@ export default function Gallery(props) {
                       <Image className='nXy44zmWO5dj' src={PortFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
                     </div>
                     <div className={portraitImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)' placeholder='blur'/>
                     </div>
                   </div>
 
