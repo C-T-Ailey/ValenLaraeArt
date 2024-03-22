@@ -9,16 +9,16 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <div className='md:h-fit md:w-full flex justify-center md:mt-12'>
+    <div className='h-full md:h-fit md:w-full flex justify-center md:m-auto'>
         <div className='w-fit flex flex-col-reverse md:flex-row md:justify-evenly items-start md:items-center'>
-            <div className='h-fit md:h-[26rem] flex flex-col justify-around mx-5'>
-                <div className='text-4xl text-center md:text-left lg:text-5xl'>
-                    <h1 className={coquette.className}>Contact</h1>
+            <div className='h-fit md:h-[26rem] flex flex-col justify-around md:m-5'>
+                <div className='text-4xl lg:text-5xl text-center md:text-left font-bold underline my-3 md:my-0'>
+                    <h1 className={espacio.className}>Contact</h1>
                 </div>
-                <div className='text-2xl font-bold tracking-wider md:w-[29rem] leading-[1.5em]'>
-                    <p className={espacio.className}>Thank you so much for viewing my site! If you have any questions or concerns, feel free to contact me by email or social media.</p>
+                <div className='text-2xl lg:text-3xl font-bold tracking-wider md:w-[29rem] leading-[1.5em] mx-5 md:mx-0'>
+                    <p className={espacio.className}>Thank you so much for visiting! If you have any questions, concerns, or just want to chat, feel free to contact me by email or social media.</p>
                 </div>
-                <div className='flex flex-col items-center w-full  text-3xl font-bold tracking-widest'>
+                <div className='flex flex-col items-center w-full  text-3xl font-bold tracking-widest my-3'>
                     <Link className={espacio.className} href={'mailto:valen.larae@gmail.com'}>valen.larae@gmail.com</Link>
                     <div className='flex w-full items-center justify-center' id='socials'>
                         
@@ -47,8 +47,8 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className='relative top-[-2rem] h-56 w-full overflow-hidden md:static md:top-[unset] md:overflow-none md:h-fit md:w-fit md:mx-5'>
-                <Image className='nXy44zmWO5dj absolute top-[-12rem] md:static md:top-[unset]' src={"/images/original/BusinessCards2023.jpg"} alt="Business card artwork." width={425} height={725} priority/>
+            <div className='relative h-56 w-full overflow-hidden md:static md:overflow-none md:h-fit md:w-fit md:mx-5'>
+                <Image className='nXy44zmWO5dj absolute top-[-12rem] md:relative md:top-[unset]' src={"/images/original/BusinessCards2023.jpg"} alt="Business card artwork." width={425} height={725} priority/>
             </div>
         </div>
     </div>
