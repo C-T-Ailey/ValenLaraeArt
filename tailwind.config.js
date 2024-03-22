@@ -13,7 +13,7 @@ module.exports = {
       },
       boxShadow: {
         "plaque": "4px 4px 7px -4px rgba(0,0,0,0.6);",
-      }
+      },
     },
   },
   plugins: [],

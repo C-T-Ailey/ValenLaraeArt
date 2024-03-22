@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         
           <Header/>
           
-          <main className='flex min-h-[calc(100vh_-_12rem)]'>
+          <main className='flex min-h-[calc(100vh_-_6rem)]'>
             {children}
           </main>
         
