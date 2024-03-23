@@ -6,7 +6,7 @@ import LandFrame from '/public/images/frame-land.png'
 import PortFrame from '/public/images/frame-port.png'
 import { avenir } from '@/app/fonts';
 
-export default function Gallery(props) {
+export default function GalleryComponent(props) {
   
   const detectOrientation = (image) => {
       // if portrait

@@ -18,7 +18,7 @@ export default function Header() {
                 <div className={`${coquette.className} flex justify-around w-full text-[1.35rem] md:text-[1.6rem] font-bold text-[#2e2e2e]`} id='nav'>
                     <Link href={"/"} className='transition ease hover:opacity-50 focus:opacity-100 active:opacity-20 duration-[400ms]'>Home</Link>
                     <Link href={"/about"} className='transition ease hover:opacity-50 focus:opacity-100 active:opacity-0 duration-[400ms]'>About</Link>
-                    <Link href={"/portfolio"} className='transition ease hover:opacity-50 focus:opacity-100 active:opacity-0 duration-[400ms]'>Portfolio</Link>
+                    <Link href={"/gallery"} className='transition ease hover:opacity-50 focus:opacity-100 active:opacity-0 duration-[400ms]'>Gallery</Link>
                     <Link href={"/contact"} className='transition ease hover:opacity-50 focus:opacity-100 active:opacity-0 duration-[400ms]'>Contact</Link>
                 </div>
                 
