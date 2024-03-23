@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Mermaid from '/public/images/sketch/Mermaid-tub.jpg'
-import Gallery from '@/components/Gallery/Gallery';
+import GalleryComp from '@/components/GalleryComponent/GalleryComponent';
 import { espacio } from '@/app/fonts';
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default function Sketchbook() {
 
     <div className={`w-full flex flex-col items-center pb-12`}>
         <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}>Sketchbook</h1>
-        <Gallery galleryContents={galleryContents} plaques={plaques}/>
+        <GalleryComp galleryContents={galleryContents} plaques={plaques}/>
     </div>
 
   )

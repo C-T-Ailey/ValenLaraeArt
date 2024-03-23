@@ -5,10 +5,10 @@ import { espacio } from '@/app/fonts'
 import './portfolio.css'
 
 export const metadata = {
-    title: 'Portfolio | Valen LaRae'
+    title: 'Gallery | Valen LaRae'
   }
 
-export default function Portfolio() {
+export default function Gallery() {
 
     const linkDivStyle = `${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center tracking-wide mx-auto my-3 max-w-40 md:max-w-56 lg:max-w-60 xl:max-w-[323px]`
 
@@ -20,7 +20,7 @@ export default function Portfolio() {
 
   return (
     <div className='md:h-full w-full text-center'>
-        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:my-12 tracking-wide`}>Portfolio</h1>
+        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:my-12 tracking-wide`}>Gallery</h1>
         <div className='w-[90%] md:w-[70%] flex flex-wrap justify-center mx-auto my-12 md:my-7 xl:my-[calc(((100vh-6rem)-323px)/3)]'>
             <div className={linkDivStyle}>
                 <div className={innerBorder}>
@@ -28,7 +28,7 @@ export default function Portfolio() {
                 <div className={titleStyle}>
                     Original Works
                 </div>
-                <Link href={'/portfolio/original-works'}>
+                <Link href={'/gallery/original-works'}>
                     <Image src={'/icons/original_thumb_md.png'} className={imageStyle} alt="Original Artworks gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
@@ -39,7 +39,7 @@ export default function Portfolio() {
                 <div className={titleStyle}>
                     <span className='tracking-tighter'>F</span>an Art
                 </div>
-                <Link href={'/portfolio/fan-art'}>
+                <Link href={'/gallery/fan-art'}>
                     <Image src={'/icons/fan_thumb_md.png'} className={imageStyle} alt="Fan Artworks gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>
@@ -50,7 +50,7 @@ export default function Portfolio() {
                 <div className={titleStyle}>
                     Sketchbook
                 </div>
-                <Link href={'/portfolio/sketchbook'}>
+                <Link href={'/gallery/sketchbook'}>
                     <Image src={'/icons/sketch_thumb_md.png'} className={imageStyle} alt="Unfinished Sketches gallery link image." height={323} width={323} priority/>
                 </Link>
             </div>

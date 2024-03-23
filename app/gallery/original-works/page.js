@@ -4,7 +4,7 @@ import Galaxy from '/public/images/original/GalaxyHairGirl.jpg'
 import Helios from '/public/images/original/Helios.jpg'
 import HeliosTwo from '/public/images/original/Helios-2.jpg'
 import Hazel from '/public/images/original/HazelWitch.jpg'
-import Gallery from '@/components/Gallery/Gallery';
+import GalleryComp from '@/components/GalleryComponent/GalleryComponent';
 import { espacio } from '@/app/fonts'
 
 export const metadata = {
@@ -47,7 +47,7 @@ export default function OriginalWorks() {
     
     <div className={`w-full flex flex-col items-center pb-12`}>
       <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}>Original Works</h1>
-      <Gallery galleryContents={galleryContents} plaques={plaques}/>
+      <GalleryComp galleryContents={galleryContents} plaques={plaques}/>
     </div>
 
   )
