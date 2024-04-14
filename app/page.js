@@ -5,6 +5,7 @@ import PortFrame from '/public/images/frame-port.png'
 import LandFrame from '/public/images/frame-land.png'
 import {coquette, espacio, avenir} from '@/app/fonts'
 import Link from 'next/link'
+import EventDisplay from "@/components/EventDisplay/EventDisplay";
 
 export const metadata = {
   title: 'Home | Valen LaRae'
@@ -70,7 +71,7 @@ export default function Home() {
                     <p className={espacio.className}>Upcoming Events</p>
                   </div>
 
-                  { events.map((event, index) => (
+                  {/* { events.map((event, index) => (
                     <div key={index} className="h-fit m-3 lg:m-6">
                       <div className="sooner">
                         <div className='text-3xl lg:text-4xl font-bold tracking-wider lg:w-[29rem]'>
@@ -84,7 +85,9 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  ))} */}
+
+                  <EventDisplay></EventDisplay>
 
 
                 </div>

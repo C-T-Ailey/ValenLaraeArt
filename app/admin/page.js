@@ -14,8 +14,19 @@ export default function Admin() {
 
     const [newUser, setNewUser] = useState({})
 
+    const [events, setEvents] = useState([])
+
+    const [images, setImages] = useState([])
+
+    const buttonStyle = "border-2 rounded-md border-black p-1 mt-2"
+
+    const goodButton = "transition ease hover:bg-yellow-500 hover:border-white hover:text-white"
+    const warnButton = "transition ease hover:bg-red-500 hover:border-white hover:text-white"
+
+    const subHeadStyle = "text-xl underline"
+
     useEffect(() => {
-      if (verifyToken() !== true) {
+      if (!verifyToken()) {
         console.log("token invalid")
         localStorage.clear();
         setIsAuth(false);
@@ -24,6 +35,27 @@ export default function Admin() {
         setIsAuth(true);
       }
     }, [])
+
+    useEffect(() => {
+      Axios.get("//localhost:4000/events/all")
+      .then((response) => {
+        setEvents(response.data.events)
+      })
+      .catch((error) => {
+        console.log(error.response.data)
+      })
+    }, [events])
+
+    useEffect(() => {
+        Axios.get("//localhost:4000/images/all")
+        .then((response) => {
+          setImages(response.data.images)
+        })
+        .catch((error) => {
+          console.log(error.response.data)
+        })
+      }, [images])
+    
     
     const verifyToken = () => {
         if (!!localStorage.getItem("token")){
@@ -73,32 +105,115 @@ export default function Admin() {
         setIsAuth(false);
     }
 
+    const handleDelete = (type, id) => {
+        Axios.delete(`//localhost:4000/${type}/delete?id=${id}`, {
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
+        }
+        })
+        .then((response) => {
+            console.log("item deleted")
+        })
+        .catch((err) => {
+            console.log("error", err)
+        })
+
+    }
+
   return (
 
     !!isAuth ?
 
     <div className='w-full flex flex-col items-center text-center'>
-        <div>
+        <div className='text-2xl underline font-bold my-6'>
             Admin Dashboard
         </div>
         <div>
-            <button onClick={() => handleLogout()}>Log Out</button>
+            <button className={`${buttonStyle} ${goodButton}`} onClick={() => handleLogout()}>Log Out</button>
         </div>
 
         <div className='my-6'>
-            <div className='text-2xl mb-3'>Events</div>
-            <div className='text-lg'>Add New</div>
+            <div className='text-2xl mb-3 underline font-semibold'>Events</div>
+            <div className={subHeadStyle}>Add New Event</div>
             <AdminCreate type={"event"} />
         </div>
-
-        <div>
-            <div className='text-2xl mb-3'>Images</div>
-            <div className='text-lg'>Add New</div>
-            <AdminCreate type={"image"} />
-            <div>Original</div>
-            <div>Fan Art</div>
-            <div>Sketchbook</div>
+        
+        <div className='w-full flex flex-row flex-wrap justify-center'>
+        {
+            events.map((event, index) => (
+                <div key={index} className="m-4 p-4 border-2 border-black">
+                    <div>{event.name}</div>
+                    <div>{event.dateStart}<br/>-<br/>{event.dateEnd}</div>
+                    <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("events", event._id)}>Delete</button>
+                </div>
+            ))
+        }
         </div>
+
+        <div className='my-6'>
+            <div className='text-2xl mb-3 underline font-semibold'>Images</div>
+            <div className={subHeadStyle}>Add New Image</div>
+            <AdminCreate type={"image"} />
+        </div>
+            <div className={subHeadStyle}>Originals</div>
+
+            <div className='w-full flex flex-row flex-wrap justify-center'>
+            
+            {
+                images.map((original, index) => (
+                    original.category === "Original Work" ?
+                    <div key={index} className="m-4 p-4 border-2 border-black">
+                        <div>{original.title}</div>
+                        <div>{original.media}</div>
+                        <div>{original.dimensions}</div>
+                        <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", original._id)}>Delete</button>
+                    </div>
+                    :
+                    <></>
+                ))
+            }
+
+            </div>
+
+            <div className={subHeadStyle}>Fan Art</div>
+
+            <div className='w-full flex flex-row flex-wrap justify-center'>
+
+            {
+                images.map((fanart, index) => (
+                    fanart.category === "Fan Art" ?
+                    <div key={index} className="m-4 p-4 border-2 border-black">
+                        <div>{fanart.title}</div>
+                        <div>{fanart.media}</div>
+                        <div>{fanart.dimensions}</div>
+                        <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", fanart._id)}>Delete</button>
+                    </div>
+                    :
+                    <></>
+                ))
+            }
+            
+            </div>
+
+            <div className={subHeadStyle}>Sketchbook</div>
+
+            <div className='w-full flex flex-row flex-wrap justify-center'>
+
+            {
+                images.map((sketch, index) => (
+                    sketch.category === "Sketchbook" ?
+                    <div key={index} className="m-4 p-4 border-2 border-black">
+                        <div>{sketch.title}</div>
+                        <div>{sketch.media}</div>
+                        <div>{sketch.dimensions}</div>
+                        <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", sketch._id)}>Delete</button>
+                    </div>
+                    :
+                    <></>
+                ))
+            }
+
+            </div>
 
     </div>
 
@@ -141,7 +256,7 @@ export default function Admin() {
                     <Form.Control className="" name="password" type='password' onChange={(e) => handleChange(e)}></Form.Control>
                 </Form.Group>
             </Container>
-            <Button variant='primary' onClick={() => handleLogin()}>Login</Button>
+            <Button className={buttonStyle} variant='primary' onClick={() => handleLogin()}>Login</Button>
         </div>
 
     </div>
