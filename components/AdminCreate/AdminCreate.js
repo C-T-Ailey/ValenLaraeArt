@@ -138,7 +138,7 @@ export default function AdminNew(props) {
                 </Form.Group>
                 
                 <Form.Group className={fieldStyle}>
-                    <Form.Label>Image Source URL</Form.Label>
+                    <Form.Label>Direct Image URL</Form.Label>
                     <Form.Control className="" name="url" onChange={(e) => handleImageChange(e)}></Form.Control>
                 </Form.Group>
                 <Button className={buttonStyle} onClick={() => handleImageSubmit()}>Submit Image</Button>

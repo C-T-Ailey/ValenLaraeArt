@@ -1,12 +1,28 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import LandFrame from '/public/images/frame-land.png'
 import PortFrame from '/public/images/frame-port.png'
 import { avenir } from '@/app/fonts';
+import Axios from 'axios'
 
 export default function GalleryComponent(props) {
+
+  const [galleryContents, setGalleryContents] = useState([])
+
+  const galleryType = props.galleryType
+
+  useEffect(() => {
+    Axios.get(`//localhost:4000/images/category?cat=${galleryType}`)
+    .then(images => {
+      console.log(images)
+      setGalleryContents(images)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }, [])
   
   const detectOrientation = (image) => {
       // if portrait
@@ -19,7 +35,7 @@ export default function GalleryComponent(props) {
       }
   }
   
-  const galleryContents = props.galleryContents
+  // const galleryContents = props.galleryContents
   
   const plaques = props.plaques
 
@@ -37,7 +53,7 @@ export default function GalleryComponent(props) {
     <div className='w-full flex h-fit justify-center xl:py-6 tracking-normal'>
       <div className='flex w-full md:w-[80%] justify-center md:justify-around flex-wrap'>
 
-        {
+        { !!galleryContents.length ?
           galleryContents.map((portrait, index) => (
 
             
@@ -88,6 +104,8 @@ export default function GalleryComponent(props) {
               </div>
             </div>
           ))
+          :
+          <></>
         }
 
       </div>

@@ -221,10 +221,6 @@ export default function Admin() {
 
     <div className='w-full flex flex-col items-center text-center'>
 
-        <div>
-            You must be logged in to access this page.
-        </div>
-
         {/* <div id="signup-form">
             <h1>Sign Up</h1>
             <Container>
@@ -241,11 +237,9 @@ export default function Admin() {
             <Button variant='primary' onClick={() => handleRegistration()}>Register</Button>
         </div> */}
 
-        <br/>
-
-        <div id="login-form">
-            <h1>Login</h1>
-            <Container>
+        <div className='w-full flex flex-col items-center text-center' id="login-form">
+            <h1 className='text-2xl underline my-6'>Admin Login</h1>
+            <Container className='flex flex-col justify-around h-32 w-32 items-center'>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
                     <Form.Control className="" name="userName" onChange={(e) => handleChange(e)}></Form.Control>
