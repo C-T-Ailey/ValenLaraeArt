@@ -11,7 +11,7 @@ export const metadata = {
   title: 'Original Art | Valen LaRae'
 }
 
-export default function OriginalWorks() {
+export default function OriginalWorks() {  
 
   const galleryContents = [BCard, Galaxy, Hazel, Helios, HeliosTwo,]
   
@@ -47,7 +47,7 @@ export default function OriginalWorks() {
     
     <div className={`w-full flex flex-col items-center pb-12`}>
       <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}>Original Works</h1>
-      <GalleryComp galleryContents={galleryContents} plaques={plaques}/>
+      <GalleryComp galleryType={"Original Work"} galleryContents={galleryContents} plaques={plaques}/>
     </div>
 
   )

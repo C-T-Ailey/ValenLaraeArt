@@ -20,8 +20,8 @@ export default function Gallery() {
 
   return (
     <div className='md:h-full w-full text-center'>
-        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:my-12 tracking-wide`}>Gallery</h1>
-        <div className='w-[90%] md:w-[70%] flex flex-wrap justify-center mx-auto my-12 md:my-7 xl:my-[calc(((100vh-6rem)-323px)/3)]'>
+        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:mt-12 tracking-wide`}>Gallery</h1>
+        <div className='w-[90%] md:w-[70%] flex flex-wrap justify-center mx-auto my-12 md:my-7 xl:my-[calc(((100vh-6rem)-450px)/3)]'>
             <div className={linkDivStyle}>
                 <div className={innerBorder}>
                 </div>

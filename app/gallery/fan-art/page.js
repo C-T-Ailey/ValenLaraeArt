@@ -48,7 +48,7 @@ export default function FanArt() {
 
     <div className='w-full flex flex-col items-center pb-12'>
         <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}><span className='tracking-tighter'>F</span>an Art</h1>
-        <GalleryComp galleryContents={galleryContents} plaques={plaques}/>
+        <GalleryComp galleryType={"Fan Art"} galleryContents={galleryContents} plaques={plaques}/>
     </div>
 
   )

@@ -10,10 +10,14 @@
     "clean": "rm .next -r && next dev"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "bootstrap-icons": "^1.11.3",
+    "jwt-decode": "^4.0.0",
     "next": "^14.1.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.2.0",
+    "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
