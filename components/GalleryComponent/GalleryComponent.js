@@ -16,7 +16,6 @@ export default function GalleryComponent(props) {
   useEffect(() => {
     Axios.get(`https://valen-larae-backend.vercel.app/images/category?cat=${galleryType}`)
     .then(res => {
-      console.log(res.data.images)
       setGalleryContents(res.data.images)
     })
     .catch((err) => {
