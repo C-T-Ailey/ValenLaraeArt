@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import {jwtDecode} from "jwt-decode"
 import AdminCreate from '@/components/AdminCreate/AdminCreate'
+import Link from 'next/link'
 
 export default function Admin() {
 
@@ -163,7 +164,7 @@ export default function Admin() {
                 images.map((original, index) => (
                     original.category === "Original Work" ?
                     <div key={index} className="m-4 p-4 border-2 border-black">
-                        <div>{original.title}</div>
+                        <Link href={`${original.url}`}>{original.title}</Link>
                         <div>{original.media}</div>
                         <div>{original.dimensions}</div>
                         <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", original._id)}>Delete</button>
@@ -183,7 +184,7 @@ export default function Admin() {
                 images.map((fanart, index) => (
                     fanart.category === "Fan Art" ?
                     <div key={index} className="m-4 p-4 border-2 border-black">
-                        <div>{fanart.title}</div>
+                        <Link href={`${fanart.url}`}>{fanart.title}</Link>
                         <div>{fanart.media}</div>
                         <div>{fanart.dimensions}</div>
                         <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", fanart._id)}>Delete</button>
@@ -203,7 +204,7 @@ export default function Admin() {
                 images.map((sketch, index) => (
                     sketch.category === "Sketchbook" ?
                     <div key={index} className="m-4 p-4 border-2 border-black">
-                        <div>{sketch.title}</div>
+                        <Link href={`${sketch.url}`}>{sketch.title}</Link>
                         <div>{sketch.media}</div>
                         <div>{sketch.dimensions}</div>
                         <button className={`${buttonStyle} ${warnButton}`} onClick={() => handleDelete("images", sketch._id)}>Delete</button>
