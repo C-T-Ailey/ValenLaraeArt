@@ -71,7 +71,7 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
                     </div>
                     <div className={landscapeImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)' placeholder='blur'/>
                     </div>
                   </div>
 
@@ -84,30 +84,25 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={PortFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
                     </div>
                     <div className={portraitImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)' placeholder='blur'/>
                     </div>
                   </div>
 
                 }
               
-                { !!galleryContents.length ?
-                galleryContents.map((image, index) => (
-                  <div key={index} className='relative h-[8rem] w-[18rem] shadow-plaque border-[#f7f7f7] border-2 rounded-sm flex flex-col justify-around items-center p-2 bg-white plaque-bg'>
-                    <div className={`${avenir.className} font-bold italic text-xl`}>
-                      {image.title}
-                    </div>
-                    <div className={`${avenir.className} font-bold text-lg`}>
-                      {image.media}
-                    </div>
-                    <div className={`${avenir.className} font-normal text-base`}>
-                      {image.dimensions}
-                    </div>
+              
+                <div className='relative h-[8rem] w-[18rem] shadow-plaque border-[#f7f7f7] border-2 rounded-sm flex flex-col justify-around items-center p-2 bg-white plaque-bg'>
+                  <div className={`${avenir.className} font-bold italic text-xl`}>
+                    {image.title}
                   </div>
-                ))
-              :
-                <></>
-              }
-                
+                  <div className={`${avenir.className} font-bold text-lg`}>
+                    {image.media}
+                  </div>
+                  <div className={`${avenir.className} font-normal text-base`}>
+                    {image.dimensions}
+                  </div>
+                </div>
+
               </div>
             </div>
           ))
