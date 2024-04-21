@@ -37,7 +37,7 @@ export default function Admin() {
     }, [])
 
     useEffect(() => {
-      Axios.get("//localhost:4000/events/all")
+      Axios.get("https://valen-larae-backend.vercel.app/events/all")
       .then((response) => {
         setEvents(response.data.events)
       })
@@ -47,7 +47,7 @@ export default function Admin() {
     }, [events])
 
     useEffect(() => {
-        Axios.get("//localhost:4000/images/all")
+        Axios.get("https://valen-larae-backend.vercel.app/images/all")
         .then((response) => {
           setImages(response.data.images)
         })
@@ -74,7 +74,7 @@ export default function Admin() {
 
     const handleRegistration = () => {
         let user = newUser;
-        Axios.post("//localhost:4000/auth/signup", user)
+        Axios.post("https://valen-larae-backend.vercel.app/auth/signup", user)
         .then(response => {
             if (response.data.message.slice(0,6)==="Failed"){
                 console.log("User registration failed.")
@@ -89,7 +89,7 @@ export default function Admin() {
 
     const handleLogin = () => {
         let credentials = newUser
-        Axios.post("//localhost:4000/auth/login", credentials)
+        Axios.post("https://valen-larae-backend.vercel.app/auth/login", credentials)
         .then(response => {
             if(Object.keys(response.data.token).length){
                 localStorage.setItem("token", response.data.token);
@@ -106,7 +106,7 @@ export default function Admin() {
     }
 
     const handleDelete = (type, id) => {
-        Axios.delete(`//localhost:4000/${type}/delete?id=${id}`, {
+        Axios.delete(`https://valen-larae-backend.vercel.app/${type}/delete?id=${id}`, {
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
         }

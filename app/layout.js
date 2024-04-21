@@ -13,9 +13,13 @@ export default function RootLayout({ children }) {
         
           <Header/>
           
-          <main className='flex min-h-small md:min-h-reg'>
+          <main className='flex min-h-small md:min-h-reg wall lg:pb-16 2xl:pb-20 3xl:pb-24'>
             {children}
           </main>
+
+          <div className="absolute bottom-0 left-0 lg:h-16 2xl:h-20 3xl:h-24 w-full z-[9999] bg-[url('../public/images/skirting.jpg')] bg-contain">
+            
+          </div>
         
       </body>
     </html>

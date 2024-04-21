@@ -9,20 +9,20 @@ import Axios from 'axios'
 
 export default function GalleryComponent(props) {
 
-  const [galleryContents, setGalleryContents] = useState([])
+  // const [galleryContents, setGalleryContents] = useState([])
 
   const galleryType = props.galleryType
 
-  useEffect(() => {
-    Axios.get(`//localhost:4000/images/category?cat=${galleryType}`)
-    .then(images => {
-      console.log(images)
-      setGalleryContents(images)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  }, [])
+  // useEffect(() => {
+  //   Axios.get(`https://valen-larae-backend.vercel.app/images/category?cat=${galleryType}`)
+  //   .then(images => {
+  //     console.log(images)
+  //     setGalleryContents(images)
+  //   })
+  //   .catch((err) => {
+  //     console.log(err)
+  //   })
+  // }, [])
   
   const detectOrientation = (image) => {
       // if portrait
@@ -35,7 +35,7 @@ export default function GalleryComponent(props) {
       }
   }
   
-  // const galleryContents = props.galleryContents
+  const galleryContents = props.galleryContents
   
   const plaques = props.plaques
 

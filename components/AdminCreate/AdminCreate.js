@@ -27,7 +27,7 @@ export default function AdminNew(props) {
     }
 
     const handleEventSubmit = () => {
-        Axios.post("//localhost:4000/events/add", newEventEntry, {
+        Axios.post("https://valen-larae-backend.vercel.app/events/add", newEventEntry, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
@@ -53,7 +53,7 @@ export default function AdminNew(props) {
         if (!newImageEntry.orientation) {
             newImageEntry.orientation = "Portrait"
         }
-        Axios.post("//localhost:4000/images/add", newImageEntry, {
+        Axios.post("https://valen-larae-backend.vercel.app/images/add", newImageEntry, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
