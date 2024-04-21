@@ -70,7 +70,7 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
                     </div>
                     <div className={landscapeImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)' placeholder='blur'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
                     </div>
                   </div>
 
@@ -83,7 +83,7 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={PortFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
                     </div>
                     <div className={portraitImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)' placeholder='blur'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
                     </div>
                   </div>
 
