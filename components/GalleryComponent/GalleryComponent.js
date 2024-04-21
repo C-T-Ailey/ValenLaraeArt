@@ -35,6 +35,7 @@ export default function GalleryComponent(props) {
   }
   
   // const galleryContents = props.galleryContents
+  // 
   
   const plaques = props.plaques
 
