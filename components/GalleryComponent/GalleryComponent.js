@@ -9,20 +9,19 @@ import Axios from 'axios'
 
 export default function GalleryComponent(props) {
 
-  // const [galleryContents, setGalleryContents] = useState([])
+  const [galleryContents, setGalleryContents] = useState([])
 
   const galleryType = props.galleryType
 
-  // useEffect(() => {
-  //   Axios.get(`https://valen-larae-backend.vercel.app/images/category?cat=${galleryType}`)
-  //   .then(images => {
-  //     console.log(images)
-  //     setGalleryContents(images)
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
-  // }, [])
+  useEffect(() => {
+    Axios.get(`https://valen-larae-backend.vercel.app/images/category?cat=${galleryType}`)
+    .then(res => {
+      setGalleryContents(res.data.images)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }, [])
   
   const detectOrientation = (image) => {
       // if portrait
@@ -35,7 +34,8 @@ export default function GalleryComponent(props) {
       }
   }
   
-  const galleryContents = props.galleryContents
+  // const galleryContents = props.galleryContents
+  // 
   
   const plaques = props.plaques
 
@@ -54,7 +54,7 @@ export default function GalleryComponent(props) {
       <div className='flex w-full md:w-[80%] justify-center md:justify-around flex-wrap'>
 
         { !!galleryContents.length ?
-          galleryContents.map((portrait, index) => (
+          galleryContents.map((image, index) => (
 
             
             // orientation = landscape
@@ -62,7 +62,7 @@ export default function GalleryComponent(props) {
             <div key={index}>
               <div className='w-fit flex flex-col items-center px-auto'>
 
-                { !detectOrientation(portrait) ?
+                { image.orientation === "Landscape" ?
 
                 // landscape orientation
 
@@ -71,7 +71,7 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={LandFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 32rem)' priority/>
                     </div>
                     <div className={landscapeImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)' placeholder='blur'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: 27rem)'/>
                     </div>
                   </div>
 
@@ -84,23 +84,25 @@ export default function GalleryComponent(props) {
                       <Image className='nXy44zmWO5dj' src={PortFrame} alt="Gallery portrait frame overlay" fill style={{objectFit: "contain"}} sizes='(max-width: 24rem)' priority/>
                     </div>
                     <div className={portraitImageStyle}>
-                      <Image className='nXy44zmWO5dj' src={portrait} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)' placeholder='blur'/>
+                      <Image className='nXy44zmWO5dj' src={image.url} alt={`artwork thumbnail ${index+1}`} fill style={{objectFit: "cover"}} sizes='(max-width: fit-content)'/>
                     </div>
                   </div>
 
                 }
               
+              
                 <div className='relative h-[8rem] w-[18rem] shadow-plaque border-[#f7f7f7] border-2 rounded-sm flex flex-col justify-around items-center p-2 bg-white plaque-bg'>
                   <div className={`${avenir.className} font-bold italic text-xl`}>
-                    {plaques[index].title}
+                    {image.title}
                   </div>
                   <div className={`${avenir.className} font-bold text-lg`}>
-                    {plaques[index].medium}
+                    {image.media}
                   </div>
                   <div className={`${avenir.className} font-normal text-base`}>
-                    {plaques[index].details}
+                    {image.dimensions}
                   </div>
                 </div>
+
               </div>
             </div>
           ))
