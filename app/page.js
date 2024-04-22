@@ -6,6 +6,7 @@ import LandFrame from '/public/images/frame-land.png'
 import {coquette, espacio, avenir} from '@/app/fonts'
 import Link from 'next/link'
 import EventDisplay from "@/components/EventDisplay/EventDisplay";
+import AdminLink from "@/components/AdminLink/AdminLink";
 
 export const metadata = {
   title: 'Home | Valen LaRae'
@@ -61,7 +62,8 @@ export default function Home() {
             <div className='h-full lg:w-[24rem] w-full lg:h-[60vh] flex flex-col justify-start lg:mx-5 my-auto'>
 
               <div className='text-4xl xl:text-5xl text-center font-bold lg:text-left w-full tracking-wider animate-fade animate-once animate-duration-[1500ms] animate-delay-500 animate-ease-in-out'>
-                <h1 className={espacio.className}>Art <span className="text-3xl xl:text-4xl">by </span>Valen LaRae</h1>
+                {/* <h1 className={espacio.className}><span onClick={() => console.log("Click!")}>A</span>rt <span className="text-3xl xl:text-4xl">by </span><span onClick={() => console.log("Click!")}>V</span>alen <span onClick={() => console.log("Click!")}>L</span>a<span onClick={() => console.log("Click!")}>R</span>ae</h1> */}
+                <AdminLink/>
               </div>
 
               <div className="animate-fade-up animate-once animate-duration-[1500ms] animate-delay-[1000ms] animate-ease-in-out">
