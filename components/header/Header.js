@@ -2,10 +2,14 @@ import Link from 'next/link'
 import React from 'react'
 import { coquette, espacio } from '@/app/fonts'
 import './header.css'
+import leftIvy from '../../public/images/ivy_left.png'
+import rightIvy from '../../public/images/ivy_right.png'
+import Image from 'next/image'
 
 export default function Header() {
 
   return (
+
     <div className='nav fixed top-0 w-full h-24 flex flex-col items-center justify-evenly bg-white z-40 p-2' style={{boxShadow: 'rgba(0,0,0,0.7) 0 0 5px'}} id='container'>
         <div className='flex justify-center' id='title'>
             <div className='text-4xl font-bold tracking-widest text-[#181818]'>

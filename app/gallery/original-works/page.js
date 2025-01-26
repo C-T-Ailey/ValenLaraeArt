@@ -46,7 +46,7 @@ export default function OriginalWorks() {
   return (
     
     <div className={`w-full flex flex-col items-center pb-12`}>
-      <h1 className={`${espacio.className} text-4xl xl:text-6xl font-bold underline mt-6 tracking-wide`}>Original Works</h1>
+      <h1 className={`${espacio.className} text-4xl md:text-5xl xl:text-6xl mt-8 md:mt-14 lg:mt-8 font-bold underline mt-6 tracking-wide`}>Original Works</h1>
       <GalleryComp galleryType={"Original Work"} galleryContents={galleryContents} plaques={plaques}/>
     </div>
 
