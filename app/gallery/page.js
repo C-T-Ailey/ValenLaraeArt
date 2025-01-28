@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Gallery() {
 
-    const linkDivStyle = `${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center tracking-wide mx-auto my-3 max-w-40 md:max-w-56 lg:max-w-60 xl:max-w-[323px]`
+    const linkDivStyle = `${espacio.className} rounded-full overflow-hidden relative flex items-center bg-white justify-center tracking-wide mx-auto my-3 max-w-40 md:max-w-56 lg:max-w-60 xl:max-w-[323px] drop-shadow-[3px_4px_3px_rgba(0,0,0,0.5)]`
 
     const innerBorder = 'absolute z-30 h-full w-full rounded-full border-white border-[3px] pointer-events-none'
 
@@ -20,7 +20,7 @@ export default function Gallery() {
 
   return (
     <div className='md:h-full w-full text-center'>
-        <h1 className={`${espacio.className} text-4xl lg:text-5xl xl:text-6xl font-bold underline my-4 lg:my-6 xl:mt-12 tracking-wide`}>Gallery</h1>
+        <h1 className={`${espacio.className} text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold underline my-6 md:my-10 lg:my-6 xl:mt-12 tracking-wide`}>Gallery</h1>
         <div className='w-[90%] md:w-[70%] flex flex-wrap justify-center mx-auto my-12 md:my-7 xl:my-[calc(((100vh-6rem)-450px)/3)]'>
             <div className={linkDivStyle}>
                 <div className={innerBorder}>

@@ -10,10 +10,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative bg-gradient-radial from-[#FDE2A6] to-[#b09a6a] via-[#d8c399] pt-24">
-        
+
+          <div className="fixed top-24 lg:top-0 w-screen h-1/3 z-[9999] flex flex-row justify-between pointer-events-none">
+            <div className="h-full w-1/2 lg:w-1/3">
+              <img src="/images/ivy_left.png" className='relative drop-shadow-[3px_3px_3px_rgba(0,0,0,0.6)] object-contain'/>
+            </div>
+
+            <div className="h-full w-1/2 lg:w-1/3">
+              <img src="/images/ivy_right.png" className='relative drop-shadow-[3px_3px_3px_rgba(0,0,0,0.6)] object-contain'/>
+            </div>
+          </div>
+
           <Header/>
           
-          <main className='flex min-h-small md:min-h-reg wall lg:pb-16 2xl:pb-20 3xl:pb-24'>
+          <main className='flex min-h-small md:min-h-reg wall lg:pb-16 2xl:pb-20 3xl:pb-24'>        
             {children}
           </main>
 
