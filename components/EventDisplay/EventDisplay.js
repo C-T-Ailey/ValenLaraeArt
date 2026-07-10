@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import './event.css'
 import Link from 'next/link'
 import Axios from 'axios'
 import { espacio } from '@/app/fonts'
@@ -20,7 +21,7 @@ export default function EventDisplay() {
 
   return (
     !!events.length ?
-    <>
+    <div id='event-container'>
         { events.map((event, index) => (
             <div key={index} className="h-fit m-3 lg:m-6">
               <div className="sooner">
@@ -36,7 +37,7 @@ export default function EventDisplay() {
               </div>
             </div>
           ))}
-    </>
+    </div>
     :
     <div className='text-2xl lg:text-3xl font-bold tracking-wider '>
         <p className={espacio.className}>Loading events...</p>
