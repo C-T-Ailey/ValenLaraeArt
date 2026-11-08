@@ -37,7 +37,7 @@ export default function Gallery() {
                 <div className={innerBorder}>
                 </div>
                 <div className={titleStyle}>
-                    <span className='tracking-tighter'>F</span>an Art
+                    <span style={{letterSpacing: "12px"}}>F</span>an Art
                 </div>
                 <Link href={'/gallery/fan-art'}>
                     <Image src={'/icons/fan_thumb_md.png'} className={imageStyle} alt="Fan Artworks gallery link image." height={323} width={323} priority/>
