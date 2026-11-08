@@ -95,7 +95,7 @@ export default function GalleryComponent(props) {
                   <div className={`${avenir.className} font-bold italic text-xl`}>
                     {image.title}
                   </div>
-                  <div className={`${avenir.className} font-bold text-lg`}>
+                  <div className={`${avenir.className} font-bold text-lg text-center`}>
                     {image.media}
                   </div>
                   <div className={`${avenir.className} font-normal text-base`}>
