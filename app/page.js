@@ -14,21 +14,6 @@ export const metadata = {
 
 export default function Home() {
 
-  const events = [
-    {
-      name: "Planet Comicon",
-      url: "htps://planetcomicon.com",
-      location: "Kansas City, MO",
-      dates: "March 8th - March 10th, 2024",
-    },
-    {
-      name: "SoonerCon",
-      url: "https://soonercon.com",
-      location: "Norman, OK",
-      dates: "June 21st - June 23rd 2024",
-    },
-  ]
-
   return (
     <div className='mx-auto mt-6 lg:mt-0 lg:w-full flex justify-center'>
         <div className='w-fit h-fit lg:m-auto 2xl:w-[75%] flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center'>
